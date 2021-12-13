@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Seach Tweets by Hashtag</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Raleway:wght@300&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Raleway:wght@300&family=Sacramento&display=swap');
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/search" class="active">Recognize Emotion</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <div style="height: auto; width: auto;">
+            <h1>Analyze Emotion<br>From Audio 📼</h1>
+        </div>
+        <br><br><br>
+
+        <img src="{{ url_for('static', filename='images/SER4.jpeg') }}" alt="" class="logo">
+    </section>
+    <div class="input_form" style="width: 40%;">
+        <label style="font-size: 1rem;">{{name}}</label><br><br>
+        <label style="line-height: 1.5;">{{ans}}</label><br><br><br>
+        <button id="button">Return</button>
+    </div>
+    <!-- <div class="result">
+        <h2 style="font-size: 1rem;">{{name}}</h2><br><br>
+        <h2>{{ans}}</h2>
+    </div> -->
+
+
+
+</body>
+<script type="text/javascript">
+    document.getElementById("button").onclick = function() {
+        location.href = "/search";
+    };
+</script>
+
+</html>

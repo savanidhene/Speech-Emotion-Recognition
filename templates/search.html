@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Seach Tweets by Hashtag</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Raleway:wght@300&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Raleway:wght@300&family=Sacramento&display=swap');
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/search" class="active">Recognize Emotion</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <div style="height: auto; width: auto;">
+            <h1>Analyze Emotion<br>From Audio 📼</h1>
+        </div>
+        <br><br><br>
+
+        <img src="{{ url_for('static', filename='images/SER4.jpeg') }}" alt="" class="logo">
+    </section>
+    <form action="http://localhost:5000/result" method="POST" class="input_form" id="search_form" enctype="multipart/form-data">
+        <label for="Audio">Select an Audio File</label><br><br><br>
+        <input type="file" id="Audio" name="file"><br><br><br>
+        <input type="submit" value='Get Result' id="button">
+    </form>
+
+
+
+</body>
+
+</html>

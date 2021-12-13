@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Speech Emotion Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Raleway:wght@300&family=Sacramento&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+
+<body onload="javascript:initial()">
+    <!-- <img src="{{ url_for('static', filename = 'images/2.png')}}" alt="" class="bg-image"> -->
+
+    <header>
+        <ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/search">Recognize Emotion</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <h1>Speech<br> Emotion Recognition</h1>
+        <br><br><br>
+
+        <img src="{{ url_for('static', filename='images/SER4.jpeg') }}" alt="" class="logo">
+        <!-- <img src="{{ url_for('static', filename='images/6.png') }}" alt="" class="bgimage"> -->
+    </section>
+    <h2 id="line1" class="line1">We live in a world of<br> emotions.</h2>
+    <h2 id="line2" class="line2">“Man is a logical machine<br> run by the scoundrels of emotions.”<br>-Raheel Farooq</h2>
+    <h2 id="line3" class="line3">Understand. Think. Refine.</h2>
+
+</body>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</html>
